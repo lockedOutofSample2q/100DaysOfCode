@@ -1,8 +1,6 @@
 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 new_alpha = []
-text_to_encrypt= input("enter text: ").lower()
-ceasar_num = input ("Choose the shifting amount: ")
 
 def caesar_array(ceasar_num):
     for i in alphabet:
@@ -22,7 +20,6 @@ def ceasar_encrypt(text_to_encrypt, ceasar_num):
     print("Encrypted text: " + encrypted_text)
     return encrypted_text
 
-encrypted_text = ceasar_encrypt(text_to_encrypt, ceasar_num)
 
 def ceasar_decrypt(encrypted_text, decryption_num):
     decrypted_text =""
@@ -34,6 +31,12 @@ def ceasar_decrypt(encrypted_text, decryption_num):
             decrypted_text = decrypted_text + alphabet[alphabet_index - decryption_num]
     print("Decrypted text: " + decrypted_text)
 
-decryption_num = input("Choose the decryption amount: ")
+ques = "yes"
+while ques == "yes":
+    text_to_encrypt= input("enter text: ").lower()
+    ceasar_num = input ("Choose the shifting amount: ")
+    encrypted_text = ceasar_encrypt(text_to_encrypt, ceasar_num)
 
-ceasar_decrypt(encrypted_text, int(decryption_num))
+    decryption_num = input("Choose the decryption amount: ")
+    ceasar_decrypt(encrypted_text, int(decryption_num))
+    ques = input("\n\nDo you want to continue? Yes or No:").lower()
