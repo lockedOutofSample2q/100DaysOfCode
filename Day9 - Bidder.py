@@ -1,4 +1,5 @@
-
+import os
+os.system('cls')
 bidding_dictionary={
 
 }
@@ -10,7 +11,7 @@ while more == "yes":
     ask_bid = input("What's your bid amount?: ")
     bidding_dictionary[ask_name]= ask_bid
     more = input("Are there more players? yes/no  : ").lower()
-
+    os.system('cls')
 
 highest_bid = 0
 for name in bidding_dictionary:
