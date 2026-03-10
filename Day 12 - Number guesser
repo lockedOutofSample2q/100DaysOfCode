@@ -1,0 +1,28 @@
+import random
+number_to_guess = random.randint(1,100)
+
+print("welcome to the number guesser game! You will have to guess a number between 1 and 100.")
+print("Are you an alpha or a beta?")
+personality = input("Type 'alpha' or 'beta': ").lower()
+no_of_tries = 0
+if personality == "alpha":
+    no_of_tries = 5
+    print("Oh big ""alpha"" man here, you get 3 tries to guess the right number. Own it!")
+elif personality == "beta":
+    no_of_tries = 10
+    print("Aww, a poor beta! You get 10 tries to guess the right number. Don't worry you'll still be a beta!")
+else:
+    print("You didn't choose a valid personality, you get 5 tries to guess the right number. Better luck next time!")
+    no_of_tries = 5
+
+for i in range(no_of_tries):
+    guess = int(input("Enter your guess: "))
+    if guess < number_to_guess:
+        print("Too low! Try again.")
+    elif guess>guess:
+        print("Too high! Try again.")
+    else:
+        print("Congratulations! You guessed the number correctly!")
+        break
+
+
