@@ -1,5 +1,5 @@
 import time
-from Snake import Snake
+from game_engine import Snake
 from turtle import Turtle, Screen
 
 
